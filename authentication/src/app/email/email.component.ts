@@ -8,8 +8,7 @@ import { moveIn, fallIn } from '../router.animations';
   selector: 'app-email',
   templateUrl: './email.component.html',
   styleUrls: ['./email.component.css'],
-  animations: [moveIn(), fallIn()],
-   host: {'[@moveIn]': ''}
+  animations: [moveIn(), fallIn()]
 
 })
 export class EmailComponent implements OnInit {
@@ -23,7 +22,10 @@ export class EmailComponent implements OnInit {
     }
   });
 }
-
+// TO BIND EXPORTED ANIMATION FUNCTION
+@HostBinding('@moveIn') get moveIn() {
+  return '';
+}
 
 onSubmit(formData) {
   if (formData.valid) {

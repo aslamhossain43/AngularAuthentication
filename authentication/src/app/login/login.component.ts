@@ -7,9 +7,7 @@ import { auth as authen } from 'firebase';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  animations: [moveIn()],
-  // IN tslint.json ,,,"use-host-property-decorator": false
-  host: {'[@moveIn]': ''}
+  animations: [moveIn()]
 })
 export class LoginComponent implements OnInit {
 
@@ -21,6 +19,11 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl('/members');
       }
     });
+  }
+
+// TO BIND EXPORTED ANIMATION FUNCTION
+@HostBinding('@moveIn') get moveIn() {
+    return '';
   }
 
   loginFb() {
