@@ -9,7 +9,7 @@ import { moveIn, fallIn, moveInLeft } from '../router.animations';
   styleUrls: ['./members.component.css'],
   animations: [moveIn(), fallIn(), moveInLeft()],
   // IN tslint.json ,,,"use-host-property-decorator": false
-  host: {'[@moveIn]': ''}
+   host: {'[@moveIn]': ''}
 })
 
 export class MembersComponent implements OnInit {
