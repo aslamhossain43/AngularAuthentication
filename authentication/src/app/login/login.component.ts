@@ -22,9 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
 // TO BIND EXPORTED ANIMATION FUNCTION
-@HostBinding('@moveIn') get moveIn() {
-    return '';
-  }
+@HostBinding('@moveIn')
 
   loginFb() {
     this.af.auth.signInWithPopup(new authen.FacebookAuthProvider()).then(

@@ -30,9 +30,7 @@ export class MembersComponent implements OnInit {
 
   }
 // TO BIND EXPORTED ANIMATION FUNCTION
-  @HostBinding('@moveIn') get moveIn() {
-    return '';
-  }
+  @HostBinding('@moveIn')
 
   logout() {
      this.af.auth.signOut();

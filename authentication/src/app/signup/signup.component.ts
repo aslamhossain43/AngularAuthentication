@@ -19,9 +19,8 @@ export class SignupComponent implements OnInit {
 
   }
   // TO BIND EXPORTED ANIMATION FUNCTION
-@HostBinding('@moveIn') get moveIn() {
-  return '';
-}
+@HostBinding('@moveIn')
+
   onSubmit(formData) {
     if (formData.valid) {
       console.log(formData.value);

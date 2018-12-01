@@ -23,9 +23,7 @@ export class EmailComponent implements OnInit {
   });
 }
 // TO BIND EXPORTED ANIMATION FUNCTION
-@HostBinding('@moveIn') get moveIn() {
-  return '';
-}
+@HostBinding('@moveIn')
 
 onSubmit(formData) {
   if (formData.valid) {
